@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+<h1> welcome to excercise</h1>
+<h2> Available products</h2>
+<div class="my_shopping">
+    {% if products %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+        </tr>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.category.name }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+        {% else %}
+        <p> No product right now! up to excercise</p>
+        {% endif %}
+</div>
+
+</body>
+</html>
